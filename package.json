@@ -1,0 +1,37 @@
+{
+  "name": "testwright",
+  "version": "1.0.0",
+  "description": "A hands-on environment for learning and experimenting with Playwright’s automation capabilities.",
+  "scripts": {
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "test": "npx playwright test --config=playwright.config.ts --headed"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test automation",
+    "ui automation",
+    "web automation",
+    "e2e testing"
+  ],
+  "author": "shankarvelusamy",
+  "license": "MIT",
+  "type": "commonjs",
+  "types": "node",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.52.0",
+    "typescript": "^5.8.3",
+    "@types/node": "22.15.3",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "5.2.6",
+    "prettier": "^3.5.3"
+  }
+}
