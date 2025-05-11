@@ -1,12 +1,6 @@
 module.exports = [
   {
-    ignores: [
-      'node_modules',
-      '**/.d.ts',
-      'eslint.config.js',
-      'prettier.config.js',
-      'playwright.config.ts'
-    ],
+    ignores: ['node_modules', '**/.d.ts', 'eslint.config.js', 'prettier.config.js', 'playwright.config.ts'],
     plugins: {
       '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
       prettier: require('eslint-plugin-prettier')

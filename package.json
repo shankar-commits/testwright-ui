@@ -1,11 +1,17 @@
 {
-  "name": "testwright",
+  "name": "testwright-ui",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shankarvelusamy/testwright-ui.git"
+  },
   "description": "A hands-on environment for learning and experimenting with Playwright’s automation capabilities.",
   "scripts": {
-    "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix",
-    "test": "npx playwright test --config=playwright.config.ts --headed"
+    "lint:base": "eslint . --ext .ts,.js",
+    "lint": "npm run lint:base",
+    "lint:fix": "npm run lint:base -- --fix",
+    "test": "playwright test --config=playwright.config.ts --headed",
+    "prepare": "playwright install --with-deps chromium"
   },
   "keywords": [
     "playwright",
@@ -15,10 +21,9 @@
     "web automation",
     "e2e testing"
   ],
-  "author": "shankarvelusamy",
+  "author": "Shankar Velusamy",
   "license": "MIT",
   "type": "commonjs",
-  "types": "node",
   "engines": {
     "node": ">=22.0.0"
   },

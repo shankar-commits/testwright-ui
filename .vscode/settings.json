@@ -9,7 +9,7 @@
   "workbench.tree.indent": 15,
   "workbench.tree.renderIndentGuides": "always",
   "workbench.editor.highlightModifiedTabs": true,
-  "window.title": "Playwright-Playground",
+  "window.title": "testwright-ui",
   "search.exclude": {
     "**/package-lock.json": true,
     "**/node_modules": true

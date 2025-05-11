@@ -14,12 +14,15 @@ export default defineConfig({
 
   outputDir: 'artifacts/output',
 
-  globalTimeout: 5 * 60 * 1000,
+  globalTimeout: 60_000,
 
-  timeout: 1 * 60 * 1000,
+  timeout: 30_000,
 
   expect: {
-    timeout: 10_000
+    timeout: 10_000,
+    toHaveScreenshot: {
+      pathTemplate: '{testDir}/vrScreenshots/{testFilePath}/{arg}.png'
+    }
   },
 
   reporter: [
@@ -31,8 +34,8 @@ export default defineConfig({
   ],
 
   use: {
-    navigationTimeout: 10_000,
-    actionTimeout: 10_000,
+    navigationTimeout: 5_000,
+    actionTimeout: 5_000,
     screenshot: { mode: 'only-on-failure', fullPage: true },
     trace: 'off',
     video: 'off',
@@ -43,7 +46,7 @@ export default defineConfig({
 
   projects: [
     {
-      name: 'testwright',
+      name: 'testwright-ui',
       use: {
         baseURL: 'https://www.saucedemo.com/',
         testIdAttribute: 'data-test',

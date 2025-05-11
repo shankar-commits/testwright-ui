@@ -7,6 +7,11 @@ export class LoginPage extends BasePage {
     super(page);
   }
 
+  /**
+   * Logs in to the application with the provided username.
+   * @param userName - The username to log in with.
+   * @description This method fills the login form and clicks on the login button.
+   */
   async login(userName: Users): Promise<void> {
     await test.step(`Logging in as '${userName}'`, async () => {
       await this.page.goto('');

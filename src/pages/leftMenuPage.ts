@@ -6,6 +6,11 @@ export class LeftMenuPage extends BasePage {
     super(page);
   }
 
+  /**
+   *
+   * @param menuItem - Menu item to select from the left panel
+   * @description This method selects a menu item from the left panel.
+   */
   async selectMenu(menuItem: 'All Items' | 'About' | 'Logout' | 'Reset App State'): Promise<void> {
     await test.step(`Selecting ${menuItem} from left panel`, async () => {
       await this.page.getByRole('button', { name: 'Open Menu' }).click();
