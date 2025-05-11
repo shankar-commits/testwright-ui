@@ -1,25 +1,34 @@
-## Pre-requisites
+# testwright-ui
 
-1. Download & install the following:
+A hands-on environment for learning and experimenting with Playwright’s automation capabilities.
+
+## Prerequisites
+
+1. **Install:**
+
    - [Node.js v22](https://nodejs.org/en/download)
-   - [VS code](https://code.visualstudio.com/download)
-2. Install the following extension within VS code:
-   - ESLint
-   - Prettier - Code formatter
-3. Run the following commands from project root directory to install required packages.
-   ```
-   npx playwright install --with-deps chromium
-   ```
-   ```
+   - [Visual Studio Code](https://code.visualstudio.com/download)
+
+2. **VS Code Extensions:**
+
+   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+   - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+3. **Install dependencies:**
+   ```sh
    npm install
    ```
 
-## Executing tests
+## Running Tests
 
-1. Run the following npm script to execute the tests. See [package.json](package.json) for list of available scripts to run.
+To execute all tests, run:
 
-   ```
-   npm run test
-   ```
+```sh
+npm run test
+```
 
-   For list of cli options, refer Playwright [docs](https://playwright.dev/docs/test-cli).
+See [package.json](package.json) for available scripts.
+
+For CLI options and advanced usage, refer to the [Playwright documentation](https://playwright.dev/docs/test-cli).
+
+---
