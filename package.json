@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shankarvelusamy/testwright-ui.git"
+    "url": "https://github.com/shankar-commits/testwright-ui.git"
   },
   "description": "A hands-on environment for learning and experimenting with Playwright’s automation capabilities.",
   "scripts": {
