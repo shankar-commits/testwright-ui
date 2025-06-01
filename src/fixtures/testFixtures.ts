@@ -37,4 +37,4 @@ export const test = baseTest.extend<pageFixtures>({
   }
 });
 
-export { expect, Page } from '@playwright/test';
+export * from '@playwright/test';

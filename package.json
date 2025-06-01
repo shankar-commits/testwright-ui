@@ -23,7 +23,7 @@
   ],
   "author": "Shankar Velusamy",
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "engines": {
     "node": ">=22.0.0"
   },
