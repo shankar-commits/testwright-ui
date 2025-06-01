@@ -30,5 +30,3 @@ npm run test
 See [package.json](package.json) for available scripts.
 
 For CLI options and advanced usage, refer to the [Playwright documentation](https://playwright.dev/docs/test-cli).
-
----
