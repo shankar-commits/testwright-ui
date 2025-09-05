@@ -8,8 +8,7 @@ test('E2E test', async ({ page, loginPage, leftMenuPage, inventoryPage, cartPage
   await checkoutPage.doCheckout(itemList);
   await page.goto('inventory.html');
 
-  const cartCount = await inventoryPage.getCartCount();
-  expect(cartCount).toBe(0);
+  expect(await inventoryPage.getCartCount()).toBe(0);
 
   await leftMenuPage.selectMenu('Logout');
   await expect(page.getByTestId('login-button')).toBeVisible();
