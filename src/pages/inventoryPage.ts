@@ -1,4 +1,4 @@
-import { BasePage } from './basePage';
+import { BasePage } from './basePage.js';
 import { test, Page, expect } from '@baseTest';
 
 export class InventoryPage extends BasePage {
@@ -11,17 +11,17 @@ export class InventoryPage extends BasePage {
    * @param itemName - Item name or array of item names
    */
   async addToCart(itemName: string | string[]): Promise<Item[]> {
-    return await test.step(`Adding '${itemName}' to cart`, async () => {
+    return await test.step(`Adding '${itemName.toString()}' to cart`, async () => {
       const itemNameArray = Array.isArray(itemName) ? itemName : [itemName];
       if (itemNameArray.length === 0) {
         throw new Error('Item name is empty');
       }
 
-      let itemList: Item[] = [];
+      const itemList: Item[] = [];
 
       for (const name of itemNameArray) {
         const itemToChose = this.page.locator('.inventory_item').filter({ hasText: name, visible: true }).first();
-        let currentItem: Item = {
+        const currentItem: Item = {
           name: name,
           description: await itemToChose.getByTestId('inventory-item-desc').innerText(),
           price: await itemToChose.getByTestId('inventory-item-price').innerText()

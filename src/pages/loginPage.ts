@@ -1,5 +1,5 @@
 import { Users } from '@enums';
-import { BasePage } from './basePage';
+import { BasePage } from './basePage.js';
 import { test, Page, expect } from '@baseTest';
 
 export class LoginPage extends BasePage {

@@ -1,6 +1,6 @@
-import { BasePage } from './basePage';
+import { BasePage } from './basePage.js';
 import { test, Page, expect } from '@baseTest';
-import { CartPage } from './cartPage';
+import { CartPage } from './cartPage.js';
 
 export class CheckoutPage extends BasePage {
   constructor(readonly page: Page) {

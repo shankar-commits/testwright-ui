@@ -3,6 +3,7 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
+  "eslint.useFlatConfig": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.snippetSuggestions": "top",
   "eslint.validate": ["javascript", "typescript"],

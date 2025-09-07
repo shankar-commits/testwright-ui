@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["esnext", "dom"],
-    "target": "ES2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "lib": ["ES2024"],
+    "target": "es2024",
     "baseUrl": ".",
     "paths": {
-      "@baseTest": ["src/fixtures/testFixtures"],
+      "@baseTest": ["src/fixtures/testFixtures.js"],
       "@constants": ["src/constants/index.ts"],
       "@enums": ["src/enums/index.ts"],
       "@pages": ["src/pages/index.ts"],
       "@utils": ["src/utils/index.ts"]
     },
-    "outDir": "build",
+    "outDir": "dist",
     "noImplicitThis": true,
     "removeComments": false,
     "skipLibCheck": true,
@@ -22,7 +22,16 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
-    "allowJs": true
+    "allowJs": true,
+    "noEmit": true
   },
-  "include": ["src", "tests"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.mjs",
+    "eslint.config.mjs",
+    "prettier.config.mjs"
+  ],
+  "exclude": ["node_modules"]
 }

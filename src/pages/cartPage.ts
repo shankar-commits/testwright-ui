@@ -1,4 +1,4 @@
-import { BasePage } from './basePage';
+import { BasePage } from './basePage.js';
 import { test, Page, expect } from '@baseTest';
 
 export class CartPage extends BasePage {
@@ -24,8 +24,11 @@ export class CartPage extends BasePage {
    * @param items - Item name or array of item names to check if they are listed in the cart
    */
   async checkIfItemListed(items: Item | Item[]): Promise<void> {
-    await test.step(`Verifying if ${items} is listed in Cart`, async () => {
-      const itemNameArray = Array.isArray(items) ? items : [items];
+    const itemNameArray = Array.isArray(items) ? items : [items];
+    const itemNamesString = itemNameArray
+      .map((item) => item.name ?? item.description ?? JSON.stringify(item))
+      .join(', ');
+    await test.step(`Verifying if ${itemNamesString} is listed in Cart`, async () => {
       if (itemNameArray.length === 0) {
         throw new Error('Item name is empty');
       }
