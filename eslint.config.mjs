@@ -23,6 +23,6 @@ export default [
     }
   },
   {
-    ignores: ['dist/**', 'node_modules/**', 'playwright.config.ts']
+    ignores: ['dist/**', 'node_modules/**', 'playwright.config.ts', 'eslint.config.mjs', 'prettier.config.mjs']
   }
 ];
